@@ -9,5 +9,6 @@ FROM merged
 LEFT JOIN vwap_metrics
 ON merged.week = vwap_metrics.week AND merged.venue = vwap_metrics.venue AND merged.size_bucket = vwap_metrics.size_bucket
 
-
+-- exporting to csv
+COPY dex_preference TO '/home/priyansh/Documents/d/dex_preference/data/dex_preferences.csv' (HEADER, DELIMITER ',')
 
